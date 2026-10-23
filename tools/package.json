@@ -1,0 +1,13 @@
+{
+  "name": "partnet-mobility-preview-tools",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "description": "Batch-generates preview thumbnails for the PartNet-Mobility viewer",
+  "scripts": {
+    "gen-previews": "node gen-previews.mjs"
+  },
+  "devDependencies": {
+    "puppeteer": "^25.16.0"
+  }
+}

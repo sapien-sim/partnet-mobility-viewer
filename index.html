@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>PartNet-Mobility Viewer</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <header>
+    <h1>PartNet-Mobility Viewer</h1>
+    <div id="status"></div>
+    <div id="token-bar">
+      <input id="hf-token" type="password" autocomplete="off"
+        placeholder="HuggingFace read token" title="HuggingFace read token">
+      <button id="token-save" type="button">Save</button>
+      <button id="token-clear" type="button">Clear</button>
+    </div>
+  </header>
+  <main>
+    <aside id="sidebar">
+      <p id="token-note" class="muted">
+        Browsing needs your own HuggingFace read token: request access to the
+        gated dataset <b>sapien-sim/PartNetMobility</b>, then create a read
+        token under Settings → Access Tokens and paste it above.
+      </p>
+      <div class="controls">
+        <select id="category" title="Category"></select>
+        <input id="search" type="search" placeholder="Search id / model id">
+      </div>
+      <div id="model-count" class="muted"></div>
+      <div id="model-list"></div>
+    </aside>
+    <section id="stage">
+      <canvas id="render-canvas"></canvas>
+      <div id="model-info" class="muted"></div>
+    </section>
+    <aside id="panel">
+      <h2>Articulation</h2>
+      <div id="joints" class="muted">Select a model to control its joints.</div>
+      <h2>Parts</h2>
+      <div id="part-tree"></div>
+    </aside>
+  </main>
+  <script src="dist/bundle.js"></script>
+</body>
+
+</html>
